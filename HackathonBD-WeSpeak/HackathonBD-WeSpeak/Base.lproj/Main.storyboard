@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="31X-wB-e1N">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="Pnz-sI-9VS">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="31X-wB-e1N" customClass="LoginViewController" customModule="HackathonBD_WeSpeak" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Ad-JU-faO"/>
+                        <viewControllerLayoutGuide type="bottom" id="ffp-9R-1UZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5ue-tg-YlC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgound" translatesAutoresizingMaskIntoConstraints="NO" id="fef-Ih-51J">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We Speak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89t-Lw-4CQ">
+                                <rect key="frame" x="20" y="255.5" width="335" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKF-66-A0r">
+                                <rect key="frame" x="30" y="415.5" width="315" height="52"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="P6T-z8-fk7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Learner">
+                                    <color key="titleColor" red="0.015686274509803921" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLearnerTap:" destination="31X-wB-e1N" eventType="touchUpInside" id="QQL-8y-zyu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBK-rT-4yy">
+                                <rect key="frame" x="30" y="487.5" width="315" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="sRp-sn-5RN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Native Speaker">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onNativeSpeakerTap:" destination="31X-wB-e1N" eventType="touchUpInside" id="0bG-kd-ZHp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mKF-66-A0r" firstAttribute="centerX" secondItem="fef-Ih-51J" secondAttribute="centerX" id="1M0-fr-TWy"/>
+                            <constraint firstItem="89t-Lw-4CQ" firstAttribute="leading" secondItem="5ue-tg-YlC" secondAttribute="leading" constant="20" id="CCK-g8-M7X"/>
+                            <constraint firstItem="ffp-9R-1UZ" firstAttribute="top" secondItem="fef-Ih-51J" secondAttribute="bottom" id="CE7-7J-pEi"/>
+                            <constraint firstAttribute="trailing" secondItem="mKF-66-A0r" secondAttribute="trailing" constant="30" id="EYa-7w-6FA"/>
+                            <constraint firstItem="fef-Ih-51J" firstAttribute="top" secondItem="5ue-tg-YlC" secondAttribute="top" id="MAL-Tp-VFa"/>
+                            <constraint firstAttribute="trailing" secondItem="89t-Lw-4CQ" secondAttribute="trailing" constant="20" id="MJu-VU-Zjc"/>
+                            <constraint firstItem="mKF-66-A0r" firstAttribute="leading" secondItem="5ue-tg-YlC" secondAttribute="leading" constant="30" id="Mn4-7w-fsa"/>
+                            <constraint firstItem="cBK-rT-4yy" firstAttribute="leading" secondItem="mKF-66-A0r" secondAttribute="leading" id="Smw-rg-MGB"/>
+                            <constraint firstItem="89t-Lw-4CQ" firstAttribute="centerY" secondItem="fef-Ih-51J" secondAttribute="centerY" constant="-48" id="VY1-cp-gHD"/>
+                            <constraint firstItem="mKF-66-A0r" firstAttribute="top" secondItem="89t-Lw-4CQ" secondAttribute="bottom" constant="100" id="ZYP-Ui-ODs"/>
+                            <constraint firstItem="cBK-rT-4yy" firstAttribute="top" secondItem="mKF-66-A0r" secondAttribute="bottom" constant="20" id="e7q-gv-eaz"/>
+                            <constraint firstItem="fef-Ih-51J" firstAttribute="leading" secondItem="5ue-tg-YlC" secondAttribute="leading" id="iPk-td-EhK"/>
+                            <constraint firstAttribute="trailing" secondItem="fef-Ih-51J" secondAttribute="trailing" id="saE-nI-HUc"/>
+                            <constraint firstItem="cBK-rT-4yy" firstAttribute="trailing" secondItem="mKF-66-A0r" secondAttribute="trailing" id="zvu-Aw-TV7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tuC-aG-MQB"/>
+                    </view>
+                    <connections>
+                        <outlet property="learnerButton" destination="mKF-66-A0r" id="I8Q-WQ-VBU"/>
+                        <outlet property="nativeSpeakerButton" destination="cBK-rT-4yy" id="UhV-NS-tyR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yaY-5V-eH7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2847" y="946"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="iDu-6C-vrF">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="JUV-Xg-h9d" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Fuk-sr-nXR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.015686274510000001" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Bf0-gf-XJa" kind="relationship" relationship="viewControllers" id="8m0-ul-7OF"/>
+                        <segue destination="LpX-tH-mqA" kind="relationship" relationship="viewControllers" id="lGD-RZ-HcG"/>
+                        <segue destination="mUM-zF-3Jy" kind="relationship" relationship="viewControllers" id="FJg-05-FNb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axU-HN-gmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1734" y="946"/>
+        </scene>
+        <!--Find View Controller-->
+        <scene sceneID="j3n-QI-us5">
+            <objects>
+                <viewController id="Bf0-gf-XJa" customClass="FindViewController" customModule="HackathonBD_WeSpeak" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r5u-8A-ebJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="qtE-NQ-Kjh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iqM-Dr-khU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYo-qB-D5S">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_matching2" translatesAutoresizingMaskIntoConstraints="NO" id="hkK-QE-PMC">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHh-Gq-Oyo">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="N6J-AX-V3a">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AI6-07-anw" customClass="CancelButton" customModule="HackathonBD_WeSpeak" customModuleProvider="target">
+                                                    <rect key="frame" x="172.5" y="573" width="30" height="34"/>
+                                                    <connections>
+                                                        <action selector="stopFindAction:" destination="Bf0-gf-XJa" eventType="touchUpInside" id="2Wc-nI-Dk5"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="AI6-07-anw" secondAttribute="bottom" constant="60" id="bV8-Cm-uWL"/>
+                                                <constraint firstItem="AI6-07-anw" firstAttribute="centerX" secondItem="N6J-AX-V3a" secondAttribute="centerX" id="gBQ-mH-F5T"/>
+                                            </constraints>
+                                        </view>
+                                        <blurEffect style="extraLight"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="iHh-Gq-Oyo" secondAttribute="trailing" id="4EU-i0-45u"/>
+                                    <constraint firstItem="iHh-Gq-Oyo" firstAttribute="top" secondItem="jYo-qB-D5S" secondAttribute="top" id="4uh-pQ-UcY"/>
+                                    <constraint firstAttribute="bottom" secondItem="iHh-Gq-Oyo" secondAttribute="bottom" id="QZ4-ZD-9wT"/>
+                                    <constraint firstItem="hkK-QE-PMC" firstAttribute="top" secondItem="jYo-qB-D5S" secondAttribute="top" id="Tli-a8-d1d"/>
+                                    <constraint firstAttribute="bottom" secondItem="hkK-QE-PMC" secondAttribute="bottom" id="c2J-Cd-H6P"/>
+                                    <constraint firstAttribute="trailing" secondItem="hkK-QE-PMC" secondAttribute="trailing" id="eUu-Lg-qZW"/>
+                                    <constraint firstItem="iHh-Gq-Oyo" firstAttribute="leading" secondItem="jYo-qB-D5S" secondAttribute="leading" id="ehf-tj-G9B"/>
+                                    <constraint firstItem="hkK-QE-PMC" firstAttribute="leading" secondItem="jYo-qB-D5S" secondAttribute="leading" id="ogR-uI-buQ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTI-F5-nDj">
+                                <rect key="frame" x="88" y="194" width="199" height="199"/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HTI-F5-nDj" secondAttribute="height" multiplier="1:1" id="Bxg-1h-Uh4"/>
+                                    <constraint firstAttribute="height" constant="199" id="hts-e9-8ph"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="findAction:" destination="Bf0-gf-XJa" eventType="touchDown" id="4v1-4d-Z88"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let find an English speaking partner" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEQ-9G-HsS">
+                                <rect key="frame" x="57.5" y="411" width="260" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jYo-qB-D5S" firstAttribute="leading" secondItem="iqM-Dr-khU" secondAttribute="leading" id="Nju-jO-atH"/>
+                            <constraint firstAttribute="trailing" secondItem="jYo-qB-D5S" secondAttribute="trailing" id="OkY-X7-3jw"/>
+                            <constraint firstAttribute="bottom" secondItem="jYo-qB-D5S" secondAttribute="bottom" id="ZvC-5Z-FHo"/>
+                            <constraint firstItem="HTI-F5-nDj" firstAttribute="centerY" secondItem="iqM-Dr-khU" secondAttribute="centerY" constant="-40" id="hRV-lY-Ydq"/>
+                            <constraint firstItem="PEQ-9G-HsS" firstAttribute="top" secondItem="HTI-F5-nDj" secondAttribute="bottom" constant="18" id="mPe-PO-1Ba"/>
+                            <constraint firstItem="PEQ-9G-HsS" firstAttribute="centerX" secondItem="HTI-F5-nDj" secondAttribute="centerX" id="n8R-iG-6pM"/>
+                            <constraint firstItem="HTI-F5-nDj" firstAttribute="centerX" secondItem="iqM-Dr-khU" secondAttribute="centerX" id="roF-29-t4U"/>
+                            <constraint firstItem="AI6-07-anw" firstAttribute="centerX" secondItem="PEQ-9G-HsS" secondAttribute="centerX" id="xB8-Lx-agz"/>
+                            <constraint firstItem="jYo-qB-D5S" firstAttribute="top" secondItem="iqM-Dr-khU" secondAttribute="top" id="xdu-wJ-fPn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7xV-Bd-M0p"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="search_unselect" selectedImage="search" id="QAy-C4-uwA">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="blurView" destination="jYo-qB-D5S" id="fNv-ep-RaV"/>
+                        <outlet property="findPartnerButton" destination="HTI-F5-nDj" id="e6g-tI-YdK"/>
+                        <outlet property="heightFindButtonConstraint" destination="hts-e9-8ph" id="uFj-4K-n1B"/>
+                        <outlet property="titleLabel" destination="PEQ-9G-HsS" id="GoB-Da-Jsp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Cv-3s-xhk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-319" y="379"/>
+        </scene>
+        <!--Conversation-->
+        <scene sceneID="kwY-wn-wVH">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="MAD-ly-rRh" customClass="ConversationViewController" customModule="HackathonBD_WeSpeak" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ht5-lE-c8h"/>
+                        <viewControllerLayoutGuide type="bottom" id="A9o-sP-WgG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1xz-sT-wl8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WzC-9C-smd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="conversationCell" rowHeight="96" id="ka2-Ck-Y6t" customClass="ConversationCell" customModule="HackathonBD_WeSpeak" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ka2-Ck-Y6t" id="JZh-Bn-8h3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7d-98-Be7">
+                                                    <rect key="frame" x="10" y="6" width="355" height="84"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jesica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFx-pJ-9xh">
+                                                            <rect key="frame" x="94" y="34" width="48.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user1" translatesAutoresizingMaskIntoConstraints="NO" id="YZB-Aw-mLB">
+                                                            <rect key="frame" x="16" y="13" width="62" height="62"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="YZB-Aw-mLB" secondAttribute="height" multiplier="1:1" id="5zu-h2-Hbc"/>
+                                                                <constraint firstAttribute="height" constant="62" id="UeD-dU-Tfu"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:Lid-fJ-aUv:image" translatesAutoresizingMaskIntoConstraints="NO" id="Lid-fJ-aUv">
+                                                            <rect key="frame" x="56" y="61" width="22" height="14"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="22" id="947-Mb-9qa"/>
+                                                                <constraint firstAttribute="height" constant="14" id="CdF-Fj-z5Y"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="YZB-Aw-mLB" firstAttribute="leading" secondItem="g7d-98-Be7" secondAttribute="leading" constant="16" id="F8v-3z-dvt"/>
+                                                        <constraint firstItem="Lid-fJ-aUv" firstAttribute="trailing" secondItem="YZB-Aw-mLB" secondAttribute="trailing" id="N2l-62-vdc"/>
+                                                        <constraint firstItem="nFx-pJ-9xh" firstAttribute="centerY" secondItem="YZB-Aw-mLB" secondAttribute="centerY" id="QnT-OK-bXc"/>
+                                                        <constraint firstItem="nFx-pJ-9xh" firstAttribute="leading" secondItem="YZB-Aw-mLB" secondAttribute="trailing" constant="16" id="VaH-l2-82H"/>
+                                                        <constraint firstItem="YZB-Aw-mLB" firstAttribute="top" secondItem="g7d-98-Be7" secondAttribute="top" constant="13" id="irC-Wd-Z6S"/>
+                                                        <constraint firstItem="Lid-fJ-aUv" firstAttribute="bottom" secondItem="YZB-Aw-mLB" secondAttribute="bottom" id="m4p-Xn-vJ5"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="g7d-98-Be7" firstAttribute="leading" secondItem="JZh-Bn-8h3" secondAttribute="leading" constant="10" id="038-ky-QmM"/>
+                                                <constraint firstAttribute="trailing" secondItem="g7d-98-Be7" secondAttribute="trailing" constant="10" id="SWE-lN-FYI"/>
+                                                <constraint firstAttribute="bottom" secondItem="g7d-98-Be7" secondAttribute="bottom" constant="6" id="VdN-LL-uWZ"/>
+                                                <constraint firstItem="g7d-98-Be7" firstAttribute="top" secondItem="JZh-Bn-8h3" secondAttribute="top" constant="6" id="Wmk-ty-Y6O"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bgView" destination="g7d-98-Be7" id="JUb-77-Xn2"/>
+                                            <outlet property="flagImageView" destination="Lid-fJ-aUv" id="5Yl-Ae-5FQ"/>
+                                            <outlet property="nameLabel" destination="nFx-pJ-9xh" id="czF-Fs-Gfc"/>
+                                            <outlet property="profilePicture" destination="YZB-Aw-mLB" id="Xwf-CK-VKb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WzC-9C-smd" firstAttribute="top" secondItem="Ht5-lE-c8h" secondAttribute="bottom" id="541-bV-dw2"/>
+                            <constraint firstItem="WzC-9C-smd" firstAttribute="leading" secondItem="1xz-sT-wl8" secondAttribute="leading" id="Sj4-v5-Lxx"/>
+                            <constraint firstAttribute="trailing" secondItem="WzC-9C-smd" secondAttribute="trailing" id="oSu-UD-uGq"/>
+                            <constraint firstItem="A9o-sP-WgG" firstAttribute="top" secondItem="WzC-9C-smd" secondAttribute="bottom" id="x07-Z8-2q0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8gs-Nk-gky"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Conversation" id="E9b-lw-EYo"/>
+                    <connections>
+                        <outlet property="tableView" destination="WzC-9C-smd" id="KFm-Zr-hzM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jQy-n6-jLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="544.79999999999995" y="1242.7286356821589"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lHA-F9-4UI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LpX-tH-mqA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="conversation" id="Lf0-1B-53u"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Ag-e4-75Q">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MAD-ly-rRh" kind="relationship" relationship="rootViewController" id="I1d-XN-dgN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTd-VW-ysM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340" y="1243"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="esz-2C-YQh">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="1Pq-qC-fDK" customClass="ProfileViewController" customModule="HackathonBD_WeSpeak" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zmM-FW-7Lu"/>
+                        <viewControllerLayoutGuide type="bottom" id="ADt-61-H1D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="akK-og-yyz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="keA-7p-8Cj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="keA-7p-8Cj" firstAttribute="top" secondItem="zmM-FW-7Lu" secondAttribute="bottom" id="8UH-ka-0P5"/>
+                            <constraint firstItem="ADt-61-H1D" firstAttribute="top" secondItem="keA-7p-8Cj" secondAttribute="bottom" id="ImR-ab-29D"/>
+                            <constraint firstAttribute="trailing" secondItem="keA-7p-8Cj" secondAttribute="trailing" id="OJl-P4-2a0"/>
+                            <constraint firstItem="keA-7p-8Cj" firstAttribute="leading" secondItem="akK-og-yyz" secondAttribute="leading" id="jta-gq-v8M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cfd-th-DIX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="UIM-iM-vvc"/>
+                    <connections>
+                        <outlet property="tableView" destination="keA-7p-8Cj" id="u97-U7-Gdo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jKW-cO-GWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="545" y="2167"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uqf-TS-ne4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mUM-zF-3Jy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="profile" id="YxY-LW-EQ4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QcB-BI-QJm">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1Pq-qC-fDK" kind="relationship" relationship="rootViewController" id="U6P-P1-47T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyE-tc-Egy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340.80000000000001" y="2167.9160419790105"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgound" width="375" height="667"/>
+        <image name="background_matching2" width="1000" height="478"/>
+        <image name="conversation" width="25" height="23"/>
+        <image name="imageView:Lid-fJ-aUv:image" width="21" height="15">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGVVZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QEgcI
+ExQZHh8jJCsuMTtDR0tPUlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdz
+Vk5TUmVwc1dOU0NvbG9ygAKAERIgwAAAgAOAC1h7MjEsIDE1fdIVChYYWk5TLm9iamVjdHOhF4AEgArS
+FQoaHaIbHIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPEQ2iTU0AKgAABPQ2
+M2z/MzFq/zQya/8zMWn/NTNr/zQyav81M2v/MjFq/zoyaP+0GDb/wxQw/8AUMf/AFTH/wBUx/8AUMf/A
+FDH/wBQx/8AUMf/AFDH/wBQx/8AUMf8yMGj/g4Gl/0lHef+CgKX/RkR3/4aFp/9EQnb/h4ap/0ZDdf/b
+tsL/8cfN/+/Gy//vxsv/78bL/+/Gy//vxsv/78TL/+/Ey//wxcv/8MXL/+/Gy/8yMGb/RkR1/4uKq/9e
+XIj/iomp/1xahv+Mi6z/VVSD/zo0Z/+8Q1r/zUZZ/8pGWv/KRln/ykZZ/8pGWf/KRln/ykZZ/8pGWf/K
+Rln/ykZZ/8pGWf8wLmL/gH6f/1xahf+FhKX/WVeD/4eGpv9XVYL/h4am/0M/cP/ZtcH/78fN/+3Gy//t
+xMv/7cTL/+3Eyv/txMr/7sbL/+7Gy//txMv/7cTL/+3Ey/8wLmD/QD9t/4aFpP9XVX//hYSj/1VTff+H
+hqX/T056/zcwYf+2PFL/xT1R/8Q+Uf/EPlL/xD5S/8Q9Uf/EPVH/xD1R/8Q9Uf/EPlL/xD5S/8Q9Uf8s
+Klv/e3qa/1BPef+BgJ7/TUx3/4KBn/9LSnX/g4Kf/0A9av/YucP/7szQ/+vJz//ryc//68nP/+vJz//r
+yc//68nP/+vJz//ryc7/68nO/+vJz/83NmT/QUBt/zk3Zv9AQG3/OTdm/0BAbf85N2X/QUJt/z44Zf+w
+OE//vzlM/745Tf++N03/vjdN/745Tf++OU3/vjlN/745Tf++OU3/vjlN/743Tf/eztX/3c3V/93N1f/c
+zdT/3c7V/93N1P/eztb/3c3V/97O1f/oy8//6cvP/+nLz//py8//6cvP/+nLz//py8//6cnP/+nJz//p
+y8//6cvP/+nJzv+7N0r/vDdK/7s3Sv+7N0r/uzdL/7s3S/+8N0v/vDdL/7w3Sv+6N0v/ujdL/7o3S/+6
+N0v/ujdL/7o3S/+6N0v/ujdL/7o3S/+6N0v/ujdL/7o3S//lxcn/5cXJ/+XFyf/lxcn/5cXJ/+XFyf/k
+xcn/5MXJ/+XFyv/lxcr/5cXK/+XFyv/lxcr/5cXK/+XFyf/lxcn/5cXJ/+XFyf/lxcr/5cXK/+XFyv+2
+Okz/tjpN/7Y6TP+2Okz/tzpN/7c6Tf+2OU3/tjlN/7Y6TP+2Okz/tjpN/7Y6Tf+2OUz/tjlM/7c5Tf+3
+OU3/tzpN/7c6Tf+2OU3/tjlN/7Y5TP/gvML/4LzC/+C8wv/gvML/4LvB/+C7wf/gu8H/4LvB/+C8wv/g
+vML/4LvB/+C7wf/gvML/4LzC/9+7wf/fu8H/4LzC/+C8wv/gvML/4LzC/9+7wf+0PlD/tT9Q/7Q+UP+0
+PlD/tT9Q/7U/UP+1P1D/tT9Q/7Q/UP+0P1D/tT9Q/7U/UP+1P1D/tT9Q/7Q+UP+0PlD/tT9Q/7U/UP+0
+PlD/tD5Q/7U/UP/dt73/3be9/9u4vf/buL3/3be9/923vf/dt73/3be9/923vf/dt73/3be9/923vf/d
+t73/3be9/923vf/dt73/27i8/9u4vP/dt73/3be9/923vf+eDyf/ng4n/58OJ/+fDif/ng4o/54OKP+e
+Dyf/ng8n/54PJ/+eDyf/ng4n/54OJ/+eDyf/ng8n/54OJ/+eDif/ng8n/54PJ/+eDyf/ng8n/54OJ/8A
+EAEAAAMAAAABABUAAAEBAAMAAAABAA8AAAECAAMAAAAEAAAFugEDAAMAAAABAAEAAAEGAAMAAAABAAIA
+AAEKAAMAAAABAAEAAAERAAQAAAABAAAACAESAAMAAAABAAEAAAEVAAMAAAABAAQAAAEWAAMAAAABAA8A
+AAEXAAQAAAABAAAE7AEcAAMAAAABAAEAAAEoAAMAAAABAAIAAAFSAAMAAAABAAEAAAFTAAMAAAAEAAAF
+wodzAAcAAAfYAAAFygAAAAAACAAIAAgACAABAAEAAQABAAAH2GFwcGwCIAAAbW50clJHQiBYWVogB9kA
+AgAZAAsAGgALYWNzcEFQUEwAAAAAYXBwbAAAAAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1hcHBsAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALZGVzYwAAAQgAAABvZHNj
+bQAAAXgAAAWcY3BydAAABxQAAAA4d3RwdAAAB0wAAAAUclhZWgAAB2AAAAAUZ1hZWgAAB3QAAAAUYlhZ
+WgAAB4gAAAAUclRSQwAAB5wAAAAOY2hhZAAAB6wAAAAsYlRSQwAAB5wAAAAOZ1RSQwAAB5wAAAAOZGVz
+YwAAAAAAAAAUR2VuZXJpYyBSR0IgUHJvZmlsZQAAAAAAAAAAAAAAFEdlbmVyaWMgUkdCIFByb2ZpbGUA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG1sdWMAAAAAAAAA
+HwAAAAxza1NLAAAAKAAAAYRkYURLAAAALgAAAaxjYUVTAAAAJAAAAdp2aVZOAAAAJAAAAf5wdEJSAAAA
+JgAAAiJ1a1VBAAAAKgAAAkhmckZVAAAAKAAAAnJodUhVAAAAKAAAApp6aFRXAAAAFgAAAsJuYk5PAAAA
+JgAAAthjc0NaAAAAIgAAAv5oZUlMAAAAHgAAAyBpdElUAAAAKAAAAz5yb1JPAAAAJAAAA2ZkZURFAAAA
+LAAAA4prb0tSAAAAFgAAA7ZzdlNFAAAAJgAAAth6aENOAAAAFgAAA8xqYUpQAAAAGgAAA+JlbEdSAAAA
+IgAAA/xwdFBPAAAAJgAABB5ubE5MAAAAKAAABERlc0VTAAAAJgAABB50aFRIAAAAJAAABGx0clRSAAAA
+IgAABJBmaUZJAAAAKAAABLJockhSAAAAKAAABNpwbFBMAAAALAAABQJydVJVAAAAIgAABS5hckVHAAAA
+JgAABVBlblVTAAAAJgAABXYAVgFhAGUAbwBiAGUAYwBuAP0AIABSAEcAQgAgAHAAcgBvAGYAaQBsAEcA
+ZQBuAGUAcgBlAGwAIABSAEcAQgAtAGIAZQBzAGsAcgBpAHYAZQBsAHMAZQBQAGUAcgBmAGkAbAAgAFIA
+RwBCACAAZwBlAG4A6AByAGkAYwBDHqUAdQAgAGgA7ABuAGgAIABSAEcAQgAgAEMAaAB1AG4AZwBQAGUA
+cgBmAGkAbAAgAFIARwBCACAARwBlAG4A6QByAGkAYwBvBBcEMAQzBDAEOwRMBD0EOAQ5ACAEPwRABD4E
+RAQwBDkEOwAgAFIARwBCAFAAcgBvAGYAaQBsACAAZwDpAG4A6QByAGkAcQB1AGUAIABSAFYAQgDBAGwA
+dABhAGwA4QBuAG8AcwAgAFIARwBCACAAcAByAG8AZgBpAGyQGnUoACAAUgBHAEIAIIJyX2ljz4/wAEcA
+ZQBuAGUAcgBpAHMAawAgAFIARwBCAC0AcAByAG8AZgBpAGwATwBiAGUAYwBuAP0AIABSAEcAQgAgAHAA
+cgBvAGYAaQBsBeQF6AXVBeQF2QXcACAAUgBHAEIAIAXbBdwF3AXZAFAAcgBvAGYAaQBsAG8AIABSAEcA
+QgAgAGcAZQBuAGUAcgBpAGMAbwBQAHIAbwBmAGkAbAAgAFIARwBCACAAZwBlAG4AZQByAGkAYwBBAGwA
+bABnAGUAbQBlAGkAbgBlAHMAIABSAEcAQgAtAFAAcgBvAGYAaQBsx3y8GAAgAFIARwBCACDVBLhc0wzH
+fGZukBoAIABSAEcAQgAgY8+P8GWHTvZOAIIsACAAUgBHAEIAIDDXMO0w1TChMKQw6wOTA7UDvQO5A7oD
+zAAgA8ADwQO/A8YDrwO7ACAAUgBHAEIAUABlAHIAZgBpAGwAIABSAEcAQgAgAGcAZQBuAOkAcgBpAGMA
+bwBBAGwAZwBlAG0AZQBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBlAGwOQg4bDiMORA4fDiUOTAAgAFIA
+RwBCACAOFw4xDkgOJw5EDhsARwBlAG4AZQBsACAAUgBHAEIAIABQAHIAbwBmAGkAbABpAFkAbABlAGkA
+bgBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBpAGwAaQBHAGUAbgBlAHIAaQENAGsAaQAgAFIARwBCACAA
+cAByAG8AZgBpAGwAVQBuAGkAdwBlAHIAcwBhAGwAbgB5ACAAcAByAG8AZgBpAGwAIABSAEcAQgQeBDEE
+SQQ4BDkAIAQ/BEAEPgREBDgEOwRMACAAUgBHAEIGRQZEBkEAIAYqBjkGMQZKBkEAIABSAEcAQgAgBicG
+RAY5BicGRQBHAGUAbgBlAHIAaQBjACAAUgBHAEIAIABQAHIAbwBmAGkAbABldGV4dAAAAABDb3B5cmln
+aHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLgBYWVogAAAAAAAA81IAAQAAAAEW
+z1hZWiAAAAAAAAB0TQAAPe4AAAPQWFlaIAAAAAAAAFp1AACscwAAFzRYWVogAAAAAAAAKBoAABWfAAC4
+NmN1cnYAAAAAAAAAAQHNAABzZjMyAAAAAAABDEIAAAXe///zJgAAB5IAAP2R///7ov///aMAAAPcAADA
+bNIlJicoWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU0JpdG1hcEltYWdlUmVwoycpKlpOU0ltYWdlUmVw
+WE5TT2JqZWN00iUmLC1XTlNBcnJheaIsKtIlJi8wXk5TTXV0YWJsZUFycmF5oy8sKtUyMzQ1CjY3ODk6
+V05TV2hpdGVcTlNDb21wb25lbnRzXE5TQ29sb3JTcGFjZV8QEk5TQ3VzdG9tQ29sb3JTcGFjZUQwIDAA
+QzAgMBADgAyAENQ8PT4KP0BBQlROU0lEVU5TSUNDV05TTW9kZWwQCYANEACAD9JECkVGV05TLmRhdGFP
+ERFoAAARaGFwcGwCAAAAbW50ckdSQVlYWVogB9wACAAXAA8ALgAPYWNzcEFQUEwAAAAAbm9uZQAAAAAA
+AAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1hcHBsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAFZGVzYwAAAMAAAAB5ZHNjbQAAATwAAAfoY3BydAAACSQAAAAjd3RwdAAACUgA
+AAAUa1RSQwAACVwAAAgMZGVzYwAAAAAAAAAfR2VuZXJpYyBHcmF5IEdhbW1hIDIuMiBQcm9maWxlAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAG1sdWMAAAAAAAAAHwAAAAxza1NLAAAALgAAAYRkYURLAAAAOAAAAbJj
+YUVTAAAAOAAAAep2aVZOAAAAQAAAAiJwdEJSAAAASgAAAmJ1a1VBAAAALAAAAqxmckZVAAAAPgAAAtho
+dUhVAAAANAAAAxZ6aFRXAAAAHgAAA0puYk5PAAAAOgAAA2hjc0NaAAAAKAAAA6JoZUlMAAAAJAAAA8pp
+dElUAAAATgAAA+5yb1JPAAAAKgAABDxkZURFAAAATgAABGZrb0tSAAAAIgAABLRzdlNFAAAAOAAAAbJ6
+aENOAAAAHgAABNZqYUpQAAAAJgAABPRlbEdSAAAAKgAABRpwdFBPAAAAUgAABURubE5MAAAAQAAABZZl
+c0VTAAAATAAABdZ0aFRIAAAAMgAABiJ0clRSAAAAJAAABlRmaUZJAAAARgAABnhockhSAAAAPgAABr5w
+bFBMAAAASgAABvxydVJVAAAAOgAAB0ZlblVTAAAAPAAAB4BhckVHAAAALAAAB7wAVgFhAGUAbwBiAGUA
+YwBuAOEAIABzAGkAdgDhACAAZwBhAG0AYQAgADIALAAyAEcAZQBuAGUAcgBpAHMAawAgAGcAcgDlACAA
+MgAsADIAIABnAGEAbQBtAGEAcAByAG8AZgBpAGwARwBhAG0AbQBhACAAZABlACAAZwByAGkAcwBvAHMA
+IABnAGUAbgDoAHIAaQBjAGEAIAAyAC4AMgBDHqUAdQAgAGgA7ABuAGgAIABNAOAAdQAgAHgA4QBtACAA
+QwBoAHUAbgBnACAARwBhAG0AbQBhACAAMgAuADIAUABlAHIAZgBpAGwAIABHAGUAbgDpAHIAaQBjAG8A
+IABkAGEAIABHAGEAbQBhACAAZABlACAAQwBpAG4AegBhAHMAIAAyACwAMgQXBDAEMwQwBDsETAQ9BDAA
+IABHAHIAYQB5AC0EMwQwBDwEMAAgADIALgAyAFAAcgBvAGYAaQBsACAAZwDpAG4A6QByAGkAcQB1AGUA
+IABnAHIAaQBzACAAZwBhAG0AbQBhACAAMgAsADIAwQBsAHQAYQBsAOEAbgBvAHMAIABzAHoA/AByAGsA
+ZQAgAGcAYQBtAG0AYQAgADIALgAykBp1KHBwlo5RSV6mACAAMgAuADIAIIJyX2ljz4/wAEcAZQBuAGUA
+cgBpAHMAawAgAGcAcgDlACAAZwBhAG0AbQBhACAAMgAsADIALQBwAHIAbwBmAGkAbABPAGIAZQBjAG4A
+4QAgAWEAZQBkAOEAIABnAGEAbQBhACAAMgAuADIF0gXQBd4F1AAgBdAF5AXVBegAIAXbBdwF3AXZACAA
+MgAuADIAUAByAG8AZgBpAGwAbwAgAGcAcgBpAGcAaQBvACAAZwBlAG4AZQByAGkAYwBvACAAZABlAGwA
+bABhACAAZwBhAG0AbQBhACAAMgAsADIARwBhAG0AYQAgAGcAcgBpACAAZwBlAG4AZQByAGkAYwEDACAA
+MgAsADIAQQBsAGwAZwBlAG0AZQBpAG4AZQBzACAARwByAGEAdQBzAHQAdQBmAGUAbgAtAFAAcgBvAGYA
+aQBsACAARwBhAG0AbQBhACAAMgAsADLHfLwYACDWjMDJACCsELnIACAAMgAuADIAINUEuFzTDMd8Zm6Q
+GnBwXqZ8+2VwACAAMgAuADIAIGPPj/Blh072TgCCLDCwMOwwpDCsMPMw3gAgADIALgAyACAw1zDtMNUw
+oTCkMOsDkwO1A70DuQO6A8wAIAOTA7oDwQO5ACADkwOsA7wDvAOxACAAMgAuADIAUABlAHIAZgBpAGwA
+IABnAGUAbgDpAHIAaQBjAG8AIABkAGUAIABjAGkAbgB6AGUAbgB0AG8AcwAgAGQAYQAgAEcAYQBtAG0A
+YQAgADIALAAyAEEAbABnAGUAbQBlAGUAbgAgAGcAcgBpAGoAcwAgAGcAYQBtAG0AYQAgADIALAAyAC0A
+cAByAG8AZgBpAGUAbABQAGUAcgBmAGkAbAAgAGcAZQBuAOkAcgBpAGMAbwAgAGQAZQAgAGcAYQBtAG0A
+YQAgAGQAZQAgAGcAcgBpAHMAZQBzACAAMgAsADIOIw4xDgcOKg41DkEOAQ4hDiEOMg5ADgEOIw4iDkwO
+Fw4xDkgOJw5EDhsAIAAyAC4AMgBHAGUAbgBlAGwAIABHAHIAaQAgAEcAYQBtAGEAIAAyACwAMgBZAGwA
+ZQBpAG4AZQBuACAAaABhAHIAbQBhAGEAbgAgAGcAYQBtAG0AYQAgADIALAAyACAALQBwAHIAbwBmAGkA
+aQBsAGkARwBlAG4AZQByAGkBDQBrAGkAIABHAHIAYQB5ACAARwBhAG0AbQBhACAAMgAuADIAIABwAHIA
+bwBmAGkAbABVAG4AaQB3AGUAcgBzAGEAbABuAHkAIABwAHIAbwBmAGkAbAAgAHMAegBhAHIAbwFbAGMA
+aQAgAGcAYQBtAG0AYQAgADIALAAyBB4EMQRJBDAETwAgBEEENQRABDAETwAgBDMEMAQ8BDwEMAAgADIA
+LAAyAC0EPwRABD4ERAQ4BDsETABHAGUAbgBlAHIAaQBjACAARwByAGEAeQAgAEcAYQBtAG0AYQAgADIA
+LgAyACAAUAByAG8AZgBpAGwAZQY6BicGRQYnACAAMgAuADIAIAZEBkgGRgAgBjEGRQYnBi8GSgAgBjkG
+JwZFdGV4dAAAAABDb3B5cmlnaHQgQXBwbGUgSW5jLiwgMjAxMgAAWFlaIAAAAAAAAPNRAAEAAAABFsxj
+dXJ2AAAAAAAABAAAAAAFAAoADwAUABkAHgAjACgALQAyADcAOwBAAEUASgBPAFQAWQBeAGMAaABtAHIA
+dwB8AIEAhgCLAJAAlQCaAJ8ApACpAK4AsgC3ALwAwQDGAMsA0ADVANsA4ADlAOsA8AD2APsBAQEHAQ0B
+EwEZAR8BJQErATIBOAE+AUUBTAFSAVkBYAFnAW4BdQF8AYMBiwGSAZoBoQGpAbEBuQHBAckB0QHZAeEB
+6QHyAfoCAwIMAhQCHQImAi8COAJBAksCVAJdAmcCcQJ6AoQCjgKYAqICrAK2AsECywLVAuAC6wL1AwAD
+CwMWAyEDLQM4A0MDTwNaA2YDcgN+A4oDlgOiA64DugPHA9MD4APsA/kEBgQTBCAELQQ7BEgEVQRjBHEE
+fgSMBJoEqAS2BMQE0wThBPAE/gUNBRwFKwU6BUkFWAVnBXcFhgWWBaYFtQXFBdUF5QX2BgYGFgYnBjcG
+SAZZBmoGewaMBp0GrwbABtEG4wb1BwcHGQcrBz0HTwdhB3QHhgeZB6wHvwfSB+UH+AgLCB8IMghGCFoI
+bgiCCJYIqgi+CNII5wj7CRAJJQk6CU8JZAl5CY8JpAm6Cc8J5Qn7ChEKJwo9ClQKagqBCpgKrgrFCtwK
+8wsLCyILOQtRC2kLgAuYC7ALyAvhC/kMEgwqDEMMXAx1DI4MpwzADNkM8w0NDSYNQA1aDXQNjg2pDcMN
+3g34DhMOLg5JDmQOfw6bDrYO0g7uDwkPJQ9BD14Peg+WD7MPzw/sEAkQJhBDEGEQfhCbELkQ1xD1ERMR
+MRFPEW0RjBGqEckR6BIHEiYSRRJkEoQSoxLDEuMTAxMjE0MTYxODE6QTxRPlFAYUJxRJFGoUixStFM4U
+8BUSFTQVVhV4FZsVvRXgFgMWJhZJFmwWjxayFtYW+hcdF0EXZReJF64X0hf3GBsYQBhlGIoYrxjVGPoZ
+IBlFGWsZkRm3Gd0aBBoqGlEadxqeGsUa7BsUGzsbYxuKG7Ib2hwCHCocUhx7HKMczBz1HR4dRx1wHZkd
+wx3sHhYeQB5qHpQevh7pHxMfPh9pH5Qfvx/qIBUgQSBsIJggxCDwIRwhSCF1IaEhziH7IiciVSKCIq8i
+3SMKIzgjZiOUI8Ij8CQfJE0kfCSrJNolCSU4JWgllyXHJfcmJyZXJocmtyboJxgnSSd6J6sn3CgNKD8o
+cSiiKNQpBik4KWspnSnQKgIqNSpoKpsqzysCKzYraSudK9EsBSw5LG4soizXLQwtQS12Last4S4WLkwu
+gi63Lu4vJC9aL5Evxy/+MDUwbDCkMNsxEjFKMYIxujHyMioyYzKbMtQzDTNGM38zuDPxNCs0ZTSeNNg1
+EzVNNYc1wjX9Njc2cjauNuk3JDdgN5w31zgUOFA4jDjIOQU5Qjl/Obw5+To2OnQ6sjrvOy07azuqO+g8
+JzxlPKQ84z0iPWE9oT3gPiA+YD6gPuA/IT9hP6I/4kAjQGRApkDnQSlBakGsQe5CMEJyQrVC90M6Q31D
+wEQDREdEikTORRJFVUWaRd5GIkZnRqtG8Ec1R3tHwEgFSEtIkUjXSR1JY0mpSfBKN0p9SsRLDEtTS5pL
+4kwqTHJMuk0CTUpNk03cTiVObk63TwBPSU+TT91QJ1BxULtRBlFQUZtR5lIxUnxSx1MTU19TqlP2VEJU
+j1TbVShVdVXCVg9WXFapVvdXRFeSV+BYL1h9WMtZGllpWbhaB1pWWqZa9VtFW5Vb5Vw1XIZc1l0nXXhd
+yV4aXmxevV8PX2Ffs2AFYFdgqmD8YU9homH1YklinGLwY0Njl2PrZEBklGTpZT1lkmXnZj1mkmboZz1n
+k2fpaD9olmjsaUNpmmnxakhqn2r3a09rp2v/bFdsr20IbWBtuW4SbmtuxG8eb3hv0XArcIZw4HE6cZVx
+8HJLcqZzAXNdc7h0FHRwdMx1KHWFdeF2Pnabdvh3VnezeBF4bnjMeSp5iXnnekZ6pXsEe2N7wnwhfIF8
+4X1BfaF+AX5ifsJ/I3+Ef+WAR4CogQqBa4HNgjCCkoL0g1eDuoQdhICE44VHhauGDoZyhteHO4efiASI
+aYjOiTOJmYn+imSKyoswi5aL/IxjjMqNMY2Yjf+OZo7OjzaPnpAGkG6Q1pE/kaiSEZJ6kuOTTZO2lCCU
+ipT0lV+VyZY0lp+XCpd1l+CYTJi4mSSZkJn8mmia1ZtCm6+cHJyJnPedZJ3SnkCerp8dn4uf+qBpoNih
+R6G2oiailqMGo3aj5qRWpMelOKWpphqmi6b9p26n4KhSqMSpN6mpqhyqj6sCq3Wr6axcrNCtRK24ri2u
+oa8Wr4uwALB1sOqxYLHWskuywrM4s660JbSctRO1irYBtnm28Ldot+C4WbjRuUq5wro7urW7LrunvCG8
+m70VvY++Cr6Evv+/er/1wHDA7MFnwePCX8Lbw1jD1MRRxM7FS8XIxkbGw8dBx7/IPci8yTrJuco4yrfL
+Nsu2zDXMtc01zbXONs62zzfPuNA50LrRPNG+0j/SwdNE08bUSdTL1U7V0dZV1tjXXNfg2GTY6Nls2fHa
+dtr724DcBdyK3RDdlt4c3qLfKd+v4DbgveFE4cziU+Lb42Pj6+Rz5PzlhOYN5pbnH+ep6DLovOlG6dDq
+W+rl63Dr++yG7RHtnO4o7rTvQO/M8Fjw5fFy8f/yjPMZ86f0NPTC9VD13vZt9vv3ivgZ+Kj5OPnH+lf6
+5/t3/Af8mP0p/br+S/7c/23//4AO0iUmSEldTlNNdXRhYmxlRGF0YaNISipWTlNEYXRh0iUmTE1cTlND
+b2xvclNwYWNlok4qXE5TQ29sb3JTcGFjZdIlJlBRV05TQ29sb3KiUCrSJSZTVFdOU0ltYWdlolMqXxAP
+TlNLZXllZEFyY2hpdmVy0VdYVHJvb3SAAQAIABEAGgAjAC0AMgA3AEwAUgBdAGQAawB4AH8AhwCJAIsA
+kACSAJQAnQCiAK0ArwCxALMAuAC7AL0AvwDBAMMAyADfAOEA4w6JDo4OmQ6iDrUOuQ7EDs0O0g7aDt0O
+4g7xDvUPAA8IDxUPIg83DzwPQA9CD0QPRg9PD1QPWg9iD2QPZg9oD2oPbw93IOMg5SDqIPgg/CEDIQgh
+FSEYISUhKiEyITUhOiFCIUUhVyFaIV8AAAAAAAACAQAAAAAAAABZAAAAAAAAAAAAAAAAAAAhYQ
+</mutableData>
+        </image>
+        <image name="profile" width="25" height="25"/>
+        <image name="search" width="25" height="25"/>
+        <image name="search_unselect" width="25" height="25"/>
+        <image name="user1" width="226" height="150"/>
+    </resources>
+</document>
